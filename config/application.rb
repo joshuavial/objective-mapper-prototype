@@ -21,6 +21,7 @@ module ObjetiveMapperPrototype
     # config.i18n.default_locale = :de
     config.generators do |g|
       g.helpers false
+      g.test_framework :rspec
     end
 
     # Do not swallow errors in after_commit/after_rollback callbacks.
