@@ -1,5 +1,14 @@
 require 'rails_helper'
 
 RSpec.describe Pod, type: :model do
-  pending "add some examples to (or delete) #{__FILE__}"
+  let!(:pod) {create :pod}
+  it 'has many people' do
+    pod.people << create(:person)
+    expect(pod.people.count).to eq(1)
+  end
+
+  it 'has many communities' do
+    pod.communities << create(:community)
+    expect(pod.communities.count).to eq(1)
+  end
 end
