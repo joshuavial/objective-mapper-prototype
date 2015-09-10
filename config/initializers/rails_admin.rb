@@ -1,5 +1,6 @@
 RailsAdmin.config do |config|
 
+  config.included_models.concat ["Community", "Pod", "Person"]
   ### Popular gems integration
 
   ## == Devise ==
