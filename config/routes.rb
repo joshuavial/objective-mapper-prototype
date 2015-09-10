@@ -3,6 +3,10 @@ Rails.application.routes.draw do
   get 'objectives/pod', as: :pod_objectives
   get 'objectives/people', as: :people_objectives
 
+  get 'login' => 'site#login_form', as: :login
+  post 'login' => 'site#login', as: :do_login
+  get 'logout' => 'site#logout', as: :logout
+
   mount RailsAdmin::Engine => '/admin', as: 'rails_admin'
 
   root 'site#index'

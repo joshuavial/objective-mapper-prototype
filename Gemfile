@@ -32,8 +32,9 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 
-gem 'pg'
+gem 'dotenv-rails'
 gem 'haml-rails'
+gem 'pg'
 gem 'rails_admin'
 
 group :development, :test do

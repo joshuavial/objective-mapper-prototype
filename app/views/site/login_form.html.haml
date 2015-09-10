@@ -1,0 +1,8 @@
+%p Enter the secret password to get access to wonderland
+
+-if @message
+  %p= @message
+
+= form_for :login, url: do_login_path do |f|
+  = f.password_field  :password
+  = f.submit 'Enter'
