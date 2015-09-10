@@ -1,6 +1,9 @@
 Rails.application.routes.draw do
+  get 'objectives/community', as: :community_objectives
+  get 'objectives/pod', as: :pod_objectives
+  get 'objectives/people', as: :people_objectives
+
   mount RailsAdmin::Engine => '/admin', as: 'rails_admin'
-  get 'site/index'
 
   root 'site#index'
 

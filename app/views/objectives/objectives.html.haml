@@ -1,0 +1,14 @@
+%h1 #{@agent_name} Objectives
+
+- @agent.each do |agent|
+  .agent{id: "agent-#{agent.id}"}
+    %h2.name= link_to agent.name, rails_admin.show_path(model_name: @agent.model_name, id: agent.id)
+    .objectives
+      -if agent.objectives.empty?
+        No objectives, add some in the #{link_to 'Admin Area', rails_admin.new_path(model_name: 'objective')}
+      -else
+        -agent.objectives.each do |objective|
+          .objective{id: "objective-#{objective.id}"}
+            %h4.title= link_to "(#{time_ago_in_words(objective.date)}) #{objective.title}", rails_admin.show_path(model_name: 'objective', id: objective.id)
+            .description= objective.description
+
