@@ -6,7 +6,7 @@ class ApplicationController < ActionController::Base
   before_filter :require_login
 
   def require_login
-    redirect_to '/' unless params[:controller] == 'site'
+    redirect_to '/' unless params[:controller] == 'site' || session[:logged_in]
   end
 
   def logged_in?
