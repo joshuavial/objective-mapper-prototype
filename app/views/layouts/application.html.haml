@@ -11,9 +11,7 @@
       %ul
         - if logged_in?
           %li= link_to 'Introduction', root_path
-          %li= link_to 'Community', community_objectives_path
-          %li= link_to 'Pod', pod_objectives_path
-          %li= link_to 'People', people_objectives_path
+          %li= link_to 'Objectives', community_objectives_path
           %li= link_to 'Admin', rails_admin_path
           %li= link_to 'Logout', logout_path
         - else

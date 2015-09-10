@@ -1,2 +1,33 @@
 %h1 Objective Mapper
-%p This is a prototype objective mapper for visualising intentions across a network
+
+%p This is a prototype objective mapper for visualising intentions across an #{link_to 'Open OS', 'http://enspiral.gitbooks.io/os/content/en/index.html'} network.
+
+%p It's pretty low tech at this stage and everyone has access to the admin area so treat it like a wiki.
+
+%p If you find the admin area confusing hit up JV and he can pair with you on making it dance.
+
+%p= link_to 'Github repo', 'https://github.com/joshuavial/objective-mapper-prototype'
+
+%h2 Where did this come from?
+
+This project is an evolution from the #{link_to 'Enspiral Mastermind', 'http://joshuavial.com/mastermind-setting-strategy-together/'} process and is designed to move beyond a static strategy that is set periodically to a real time reflection of where a group is heading.
+
+%h2 How does it work?
+
+%p The key concept of the app is an objective. Each Community, Pod and Individual can set up to three objectives which reflects their current direction. An Objective has a title, description and date and it can be short, medium or long term.
+
+%p Other words I considered were Intention, Goal, Direction and Momentum. It might be worth remembering the concept of S.M.A.R.T (Specific, Measurable, Achievable, Realistic, Timed) when thinking about the objectives you want to set.
+
+%p Individual Objectives can be updated at any time.
+
+%p Pod and Community Objectives are set by Agreement (a Loomio internal to that group).
+
+
+%h2 Where to next?
+
+%ul
+  %li Styling: someone make this app pretty please :)
+  %li Stepping Stones: each objective can have three (five?) sub tasks which are stepping stones.
+  %li Feed: Home page of the app will show the recent changes to the objectives.
+  %li Holodex: Integrate with holodex so current objectives are discoverable via that flash interface
+  %li Remove group data: Currently the app has it's own database for community, pod and individuals - should use holodex as source of truth.

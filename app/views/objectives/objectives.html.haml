@@ -1,4 +1,10 @@
 %h1 #{@agent_name} Objectives
+%p
+  = link_to 'Community', community_objectives_path
+  |
+  = link_to 'Pod', pod_objectives_path
+  |
+  = link_to 'Individual', people_objectives_path
 
 - @agent.each do |agent|
   .agent{id: "agent-#{agent.id}"}
