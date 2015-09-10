@@ -24,6 +24,8 @@ module ObjetiveMapperPrototype
       g.test_framework :rspec
       g.view_specs false
       g.template_engine :haml
+      g.fixture_replacement :factory_girl
+      g.factory_girl dir: 'spec/factories'
     end
 
     # Do not swallow errors in after_commit/after_rollback callbacks.
