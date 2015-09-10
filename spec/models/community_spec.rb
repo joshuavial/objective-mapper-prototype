@@ -11,4 +11,9 @@ RSpec.describe Community, type: :model do
     community.people << create(:person)
     expect(community.people.count).to eq(1)
   end
+
+  it 'has many objectives' do
+    community.objectives << create(:objective)
+    expect(community.objectives.count).to eq(1)
+  end
 end

@@ -5,6 +5,8 @@ class Person < ActiveRecord::Base
     a.has_many :direct_communities, source_type: 'Community'
   end
 
+  has_many :objectives, as: :agent
+
   def communities
     pod_communities.concat(direct_communities)
   end

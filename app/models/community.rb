@@ -5,4 +5,6 @@ class Community < ActiveRecord::Base
     a.has_many :pods, source_type: 'Pod'
     a.has_many :people, source_type: 'Person'
   end
+
+  has_many :objectives, as: :agent
 end
