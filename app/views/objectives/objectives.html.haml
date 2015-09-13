@@ -15,6 +15,6 @@
       -else
         -agent.objectives.each do |objective|
           .objective{id: "objective-#{objective.id}"}
-            %h4.title= link_to "(#{time_ago_in_words(objective.date)}) #{objective.title}", rails_admin.show_path(model_name: 'objective', id: objective.id)
+            %h4.title= link_to "(#{objective.date ? time_ago_in_words(objective.date) : '-'}) #{objective.title}", rails_admin.show_path(model_name: 'objective', id: objective.id)
             .description= objective.description
 
