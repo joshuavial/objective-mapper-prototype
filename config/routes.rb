@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
   get 'objectives/community', as: :community_objectives
+  get 'objectives/community/:id' => "objectives#show_community", as: :show_community_objectives
   get 'objectives/pod', as: :pod_objectives
   get 'objectives/people', as: :people_objectives
 

@@ -1,18 +1,30 @@
 class ObjectivesController < ApplicationController
   def community
-    @agent = Community.all
+    @agents = Community.all
     @agent_name = 'Community'
     render :objectives
   end
 
+  def show_community
+    @community = Community.find params[:id]
+    @agent_name = @community.name
+    @agents = [@community]
+    @agents.concat @community.pods
+    people = @community.pods.collect(&:people)
+    people.concat @community.people
+    people = people.compact.flatten.uniq
+    @agents.concat people
+    render :objectives
+  end
+
   def pod
-    @agent = Pod.all
+    @agents = Pod.all
     @agent_name = 'Pod'
     render :objectives
   end
 
   def people
-    @agent = Person.all
+    @agents = Person.all
     @agent_name = 'Individual'
     render :objectives
   end

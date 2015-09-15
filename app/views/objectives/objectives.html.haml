@@ -6,9 +6,12 @@
   |
   = link_to 'Individual', people_objectives_path
 
-- @agent.each do |agent|
+- if @agents.class == Array
+  = link_to "Edit #{@agent_name}", rails_admin.edit_path(model_name: 'community', id: @agents.first.id)
+
+- @agents.each do |agent|
   .agent{id: "agent-#{agent.id}"}
-    %h2.name= link_to agent.name, rails_admin.show_path(model_name: @agent.model_name, id: agent.id)
+    %h2.name= link_to agent.name, agent_path(agent)
     .objectives
       -if agent.objectives.empty?
         No objectives, add some in the #{link_to 'Admin Area', rails_admin.new_path(model_name: 'objective')}
