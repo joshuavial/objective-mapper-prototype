@@ -14,7 +14,6 @@
  *= require_self
  */
 
-nav li {
-  display: inline;
-  list-style: none;
-}
+@import "bootstrap-sprockets";
+@import "bootstrap";
+@import "custom";
