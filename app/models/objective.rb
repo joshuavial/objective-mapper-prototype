@@ -5,7 +5,7 @@ class Objective < ActiveRecord::Base
 
   private
   def maximum_objectives_per_agent
-    if agent && agent.objectives.count > 2
+    if agent && agent.objectives.count > 2 && !agent.objectives.include?(self)
       errors.add(:agent_id, "No more than three objectives allowed")
     end
   end
